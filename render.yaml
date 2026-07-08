@@ -15,10 +15,10 @@ services:
     dockerContext: ./backend
     plan: free
     healthCheckPath: /health
-    disk:
-      name: bayan-data
-      mountPath: /app/data
-      sizeGB: 1
+    # NOTE: the free plan has no persistent disk, so FAISS indexes live in the
+    # container's ephemeral storage and are rebuilt after a restart. To make them
+    # permanent, upgrade this service to a paid plan and add a `disk:` block
+    # mounted at /app/data.
     envVars:
       - key: DATABASE_URL
         fromDatabase:
