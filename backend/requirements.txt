@@ -14,7 +14,10 @@ pydantic-settings==2.3.0
 email-validator==2.1.1
 
 # --- Auth / security ---
-passlib[bcrypt]==1.7.4
+# bcrypt is pinned to 4.0.1: passlib 1.7.4 is incompatible with bcrypt >= 4.1
+# (which raises on >72-byte passwords and breaks passlib's backend detection).
+passlib==1.7.4
+bcrypt==4.0.1
 python-jose[cryptography]==3.3.0
 
 # --- AI / RAG ---
