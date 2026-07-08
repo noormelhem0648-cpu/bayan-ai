@@ -2,10 +2,12 @@
 from __future__ import annotations
 
 from functools import lru_cache
-from typing import Annotated
 
-from pydantic import Field, field_validator
-from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+def _split_csv(value: str) -> list[str]:
+    return [item.strip() for item in value.split(",") if item.strip()]
 
 
 class Settings(BaseSettings):
@@ -17,10 +19,9 @@ class Settings(BaseSettings):
     APP_NAME: str = "Bayan AI"
     ENVIRONMENT: str = "development"
     API_V1_PREFIX: str = "/api/v1"
-    # NoDecode: accept a plain comma-separated string from env (not JSON); the
-    # validator below splits it. Without this, pydantic-settings tries json.loads
-    # on the raw value and crashes on non-JSON input.
-    BACKEND_CORS_ORIGINS: Annotated[list[str], NoDecode] = Field(default_factory=list)
+    # Kept as plain strings (comma-separated) so pydantic-settings never tries to
+    # JSON-decode them from env vars. Use the *_list properties below for the list.
+    BACKEND_CORS_ORIGINS: str = ""
 
     # Database
     DATABASE_URL: str = "postgresql+psycopg2://bayan:bayan@localhost:5432/bayan_ai"
@@ -31,8 +32,8 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
-    # AI (Gemini)
-    GEMINI_API_KEYS: Annotated[list[str], NoDecode] = Field(default_factory=list)
+    # AI (Gemini) — comma-separated for automatic key rotation.
+    GEMINI_API_KEYS: str = ""
     GEMINI_CHAT_MODEL: str = "gemini-2.0-flash"
     GEMINI_EMBEDDING_MODEL: str = "text-embedding-004"
 
@@ -55,12 +56,13 @@ class Settings(BaseSettings):
     EMAIL_FROM: str = "noreply@bayan.ai"
     FRONTEND_URL: str = "http://localhost:5173"
 
-    @field_validator("BACKEND_CORS_ORIGINS", "GEMINI_API_KEYS", mode="before")
-    @classmethod
-    def _split_csv(cls, v):
-        if isinstance(v, str):
-            return [item.strip() for item in v.split(",") if item.strip()]
-        return v
+    @property
+    def gemini_api_keys_list(self) -> list[str]:
+        return _split_csv(self.GEMINI_API_KEYS)
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        return _split_csv(self.BACKEND_CORS_ORIGINS)
 
 
 @lru_cache

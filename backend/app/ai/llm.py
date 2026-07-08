@@ -24,7 +24,7 @@ class GeminiClient:
     """Thin wrapper around google-generativeai that rotates keys on quota errors."""
 
     def __init__(self, extra_keys: Sequence[str] | None = None) -> None:
-        keys = list(settings.GEMINI_API_KEYS) + list(extra_keys or [])
+        keys = list(settings.gemini_api_keys_list) + list(extra_keys or [])
         # De-duplicate while preserving order.
         self._keys = list(dict.fromkeys(k for k in keys if k))
         self._idx = 0

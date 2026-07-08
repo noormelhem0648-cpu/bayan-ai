@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class EmbeddingProvider:
     def __init__(self, extra_keys: list[str] | None = None) -> None:
-        keys = list(settings.GEMINI_API_KEYS) + list(extra_keys or [])
+        keys = list(settings.gemini_api_keys_list) + list(extra_keys or [])
         self._keys = list(dict.fromkeys(k for k in keys if k))
         self._idx = 0
         self.model = settings.GEMINI_EMBEDDING_MODEL
