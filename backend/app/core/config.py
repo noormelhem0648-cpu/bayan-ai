@@ -2,9 +2,10 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from typing import Annotated
 
 from pydantic import Field, field_validator
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -16,7 +17,10 @@ class Settings(BaseSettings):
     APP_NAME: str = "Bayan AI"
     ENVIRONMENT: str = "development"
     API_V1_PREFIX: str = "/api/v1"
-    BACKEND_CORS_ORIGINS: list[str] = Field(default_factory=list)
+    # NoDecode: accept a plain comma-separated string from env (not JSON); the
+    # validator below splits it. Without this, pydantic-settings tries json.loads
+    # on the raw value and crashes on non-JSON input.
+    BACKEND_CORS_ORIGINS: Annotated[list[str], NoDecode] = Field(default_factory=list)
 
     # Database
     DATABASE_URL: str = "postgresql+psycopg2://bayan:bayan@localhost:5432/bayan_ai"
@@ -28,7 +32,7 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     # AI (Gemini)
-    GEMINI_API_KEYS: list[str] = Field(default_factory=list)
+    GEMINI_API_KEYS: Annotated[list[str], NoDecode] = Field(default_factory=list)
     GEMINI_CHAT_MODEL: str = "gemini-2.0-flash"
     GEMINI_EMBEDDING_MODEL: str = "text-embedding-004"
 
