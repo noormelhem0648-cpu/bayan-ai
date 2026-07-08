@@ -45,12 +45,11 @@ services:
         source: /*
         destination: /index.html
     envVars:
-      # Build-time: point the SPA at the backend service automatically.
+      # Build-time: point the SPA at the deployed backend. Hardcoded (rather than
+      # fromService) because Vite must embed this value during the static build,
+      # and the explicit URL is the most reliable way to guarantee that.
       - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: bayan-ai-backend
-          property: host
+        value: https://bayan-ai-backend.onrender.com/api/v1
 
 databases:
   - name: bayan-ai-db
