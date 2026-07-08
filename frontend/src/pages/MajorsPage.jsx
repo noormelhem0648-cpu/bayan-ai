@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { api } from "../api/client";
@@ -10,13 +10,24 @@ import BackBar from "../components/BackBar";
 
 export default function MajorsPage() {
   const { trackId } = useParams();
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.split("-")[0] || "ar";
   const [majors, setMajors] = useState(null);
 
   useEffect(() => {
-    api.get(`/catalog/majors?track_id=${trackId}`).then(setMajors).catch(() => setMajors([]));
-  }, [trackId]);
+    api
+      .get(`/catalog/majors?track_id=${trackId}`)
+      .then((data) => {
+        // One program per track → skip this step and go straight to years/levels.
+        if (data.length === 1) {
+          navigate(`/major/${data[0].id}`, { replace: true });
+          return;
+        }
+        setMajors(data);
+      })
+      .catch(() => setMajors([]));
+  }, [trackId, navigate]);
 
   if (!majors) return <Spinner label={t("common.loading")} />;
 

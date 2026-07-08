@@ -1,25 +1,43 @@
 import { useNavigate } from "react-router-dom";
 
-// Reusable responsive grid of clickable cards used across the catalog flow.
-export default function ChoiceGrid({ title, subtitle, items }) {
+// Reusable elegant grid used across the catalog flow.
+// Each item: { key, to, label, subtitle?, numeral?, icon?, description? }
+export default function ChoiceGrid({ title, subtitle, pill, items }) {
   const navigate = useNavigate();
   return (
     <section>
-      {title && <h1 className="mb-1 text-2xl font-bold sm:text-3xl">{title}</h1>}
-      {subtitle && <p className="mb-6 text-slate-500">{subtitle}</p>}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-8 text-center">
+        {pill && <div className="page-pill">{pill}</div>}
+        {title && <h1 className="page-title">{title}</h1>}
+        {subtitle && (
+          <p className="mx-auto mt-3 max-w-xl text-ink/60 dark:text-slate-400">
+            {subtitle}
+          </p>
+        )}
+      </div>
+
+      <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
         {items.map((it) => (
           <button
             key={it.key}
             onClick={() => navigate(it.to)}
-            className="card group text-start transition hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-md"
+            className="card flex flex-col items-center justify-center py-8 text-center
+                       transition hover:-translate-y-1 hover:border-brand-400
+                       hover:shadow-lg"
           >
-            <div className="mb-3 grid h-12 w-12 place-items-center rounded-xl bg-brand-100 text-2xl dark:bg-brand-900/40">
-              {it.icon || "📘"}
+            <div className="numeral">{it.numeral || it.icon || "•"}</div>
+            <div className="text-lg font-bold text-ink dark:text-cream-100">
+              {it.label}
             </div>
-            <div className="text-lg font-semibold">{it.label}</div>
+            {it.subtitle && (
+              <div className="mt-1 text-sm text-ink/50 dark:text-slate-400">
+                {it.subtitle}
+              </div>
+            )}
             {it.description && (
-              <div className="mt-1 text-sm text-slate-500">{it.description}</div>
+              <div className="mt-1 text-sm text-ink/50 dark:text-slate-400">
+                {it.description}
+              </div>
             )}
           </button>
         ))}

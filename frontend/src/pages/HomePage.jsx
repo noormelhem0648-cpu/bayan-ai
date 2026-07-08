@@ -28,9 +28,15 @@ export default function HomePage() {
     key: tr.id,
     to: `/track/${tr.id}`,
     label: localized(tr.name_i18n, lang),
-    description: localized(tr.description_i18n, lang, ""),
+    subtitle: lang === "en" ? "" : tr.name_i18n?.en,
     icon: ICONS[tr.slug] || "📚",
   }));
 
-  return <ChoiceGrid title={t("flow.chooseTrack")} items={items} />;
+  return (
+    <ChoiceGrid
+      pill={t("app.tagline")}
+      title={t("flow.chooseTrack")}
+      items={items}
+    />
+  );
 }

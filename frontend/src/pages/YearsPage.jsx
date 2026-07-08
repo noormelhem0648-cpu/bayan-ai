@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { api } from "../api/client";
 import { localized } from "../lib/i18nContent";
+import { toRoman } from "../lib/roman";
 import ChoiceGrid from "../components/ChoiceGrid";
 import Spinner from "../components/Spinner";
 import BackBar from "../components/BackBar";
@@ -23,8 +24,9 @@ export default function YearsPage() {
   const items = years.map((y) => ({
     key: y.id,
     to: `/year/${y.id}`,
+    numeral: toRoman(y.number),
     label: localized(y.name_i18n, lang) || `${t("flow.year")} ${y.number}`,
-    icon: "📅",
+    subtitle: lang === "en" ? "" : y.name_i18n?.en,
   }));
 
   return (

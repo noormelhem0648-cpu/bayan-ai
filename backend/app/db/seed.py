@@ -11,10 +11,26 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.security import hash_password
-from app.models import Language, Track, User
+from app.models import AcademicYear, Language, Major, Track, User
 from app.models.enums import UserRole
 
 logger = logging.getLogger(__name__)
+
+# Years shown under the "Arabic" and "Applied Arabic" tracks.
+YEAR_NAMES: dict[int, dict] = {
+    1: {"ar": "السنة الأولى", "en": "First Year"},
+    2: {"ar": "السنة الثانية", "en": "Second Year"},
+    3: {"ar": "السنة الثالثة", "en": "Third Year"},
+    4: {"ar": "السنة الرابعة", "en": "Fourth Year"},
+}
+
+# Levels 1..7 shown under the "Arabic for non-native speakers" track.
+LEVEL_NAMES: dict[int, dict] = {
+    n: {"ar": f"المستوى {a}", "en": f"Level {n}"}
+    for n, a in enumerate(
+        ["الأول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع"], start=1
+    )
+}
 
 LANGUAGES = [
     ("ar", "Arabic", "العربية", "rtl"),
@@ -89,4 +105,51 @@ def seed(db: Session) -> None:
         )
         logger.info("Seeded default admin: %s / Admin@12345", admin_email)
 
+    db.flush()
+
+    # Each track gets one (hidden) program, so the UI can go straight from the
+    # track to its years/levels. Arabic & Applied → years 1..4; non-natives → 1..7.
+    _seed_program(db, "arabic", YEAR_NAMES)
+    _seed_program(db, "applied-arabic", YEAR_NAMES)
+    _seed_program(db, "non-natives", LEVEL_NAMES)
+
     db.commit()
+
+
+def _seed_program(db: Session, track_slug: str, number_names: dict[int, dict]) -> None:
+    """Ensure a track has one program with the given numbered years/levels."""
+    track = db.execute(
+        select(Track).where(Track.slug == track_slug)
+    ).scalar_one_or_none()
+    if not track:
+        return
+
+    major = db.execute(
+        select(Major).where(Major.track_id == track.id)
+    ).scalar_one_or_none()
+    if not major:
+        major = Major(
+            track_id=track.id,
+            name_i18n={"ar": "البرنامج", "en": "Program"},
+            order_index=0,
+            is_active=True,
+        )
+        db.add(major)
+        db.flush()
+
+    for number, names in number_names.items():
+        exists = db.execute(
+            select(AcademicYear).where(
+                AcademicYear.major_id == major.id, AcademicYear.number == number
+            )
+        ).scalar_one_or_none()
+        if not exists:
+            db.add(
+                AcademicYear(
+                    major_id=major.id,
+                    number=number,
+                    name_i18n=names,
+                    order_index=number,
+                    is_active=True,
+                )
+            )
