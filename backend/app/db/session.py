@@ -8,11 +8,24 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from app.core.config import settings
 
-engine = create_engine(
-    settings.DATABASE_URL,
-    pool_pre_ping=True,
-    future=True,
-)
+
+def _normalize_db_url(url: str) -> str:
+    """Managed hosts (Render/Heroku) hand out ``postgres://`` URLs, which
+    SQLAlchemy 2.0 rejects. Normalize to an explicit psycopg2 driver."""
+    if url.startswith("postgres://"):
+        return url.replace("postgres://", "postgresql+psycopg2://", 1)
+    if url.startswith("postgresql://"):
+        return url.replace("postgresql://", "postgresql+psycopg2://", 1)
+    return url
+
+
+# SQLite needs a special connect arg for multi-threaded use; Postgres uses a pool.
+_db_url = _normalize_db_url(settings.DATABASE_URL)
+_engine_kwargs = {"pool_pre_ping": True, "future": True}
+if _db_url.startswith("sqlite"):
+    _engine_kwargs["connect_args"] = {"check_same_thread": False}
+
+engine = create_engine(_db_url, **_engine_kwargs)
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
 
