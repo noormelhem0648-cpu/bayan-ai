@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: bayan
+      POSTGRES_PASSWORD: bayan
+      POSTGRES_DB: bayan_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bayan -d bayan_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg2://bayan:bayan@db:5432/bayan_ai
+      SECRET_KEY: dev-secret-change-me
+      BACKEND_CORS_ORIGINS: http://localhost:5173
+      INDEXES_DIR: /app/data/indexes
+      UPLOADS_DIR: /app/data/uploads
+      # Provide keys via your shell env: `export GEMINI_API_KEYS=key1,key2`
+      GEMINI_API_KEYS: ${GEMINI_API_KEYS:-}
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend_data:/app/data
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    environment:
+      VITE_API_BASE_URL: http://localhost:8000/api/v1
+    ports:
+      - "5173:5173"
+
+volumes:
+  db_data:
+  backend_data:

@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "Ваш умный помощник в изучении арабского языка" },
+  "nav": {
+    "home": "Главная", "chat": "Ассистент", "profile": "Профиль",
+    "settings": "Настройки", "logout": "Выйти",
+    "instructor": "Преподаватель", "admin": "Администратор", "contribute": "Добавить ключ"
+  },
+  "auth": {
+    "login": "Войти", "register": "Создать аккаунт", "email": "Эл. почта",
+    "password": "Пароль", "name": "Полное имя", "appLanguage": "Язык приложения",
+    "forgotPassword": "Забыли пароль?", "resetPassword": "Сбросить пароль",
+    "haveAccount": "Уже есть аккаунт?", "noAccount": "Нет аккаунта?",
+    "signIn": "Вход", "signUp": "Регистрация",
+    "welcome": "Добро пожаловать в Bayan AI",
+    "subtitle": "Изучайте арабский с ИИ-ассистентом на основе ваших учебников"
+  },
+  "flow": {
+    "chooseTrack": "Выберите раздел", "chooseMajor": "Выберите специальность",
+    "chooseYear": "Выберите курс", "chooseSubject": "Выберите предмет",
+    "back": "Назад", "year": "Курс"
+  },
+  "chat": {
+    "placeholder": "Спросите об этом предмете…", "send": "Отправить", "newChat": "Новый чат",
+    "conversations": "Беседы", "thinking": "Думаю…",
+    "blocked": "Этот предмет сейчас заблокирован",
+    "fromBook": "Из учебника", "generalKnowledge": "Общие знания",
+    "copy": "Копировать", "regenerate": "Сгенерировать заново", "noConversations": "Пока нет бесед",
+    "quiz": "Тест"
+  },
+  "quiz": {
+    "title": "Создать тест", "generate": "Создать", "difficulty": "Сложность",
+    "beginner": "Начальный", "intermediate": "Средний", "advanced": "Продвинутый",
+    "count": "Количество вопросов", "topic": "Тема (необязательно)", "check": "Проверить ответ",
+    "correct": "Верно", "incorrect": "Неверно", "close": "Закрыть"
+  },
+  "settings": {
+    "title": "Настройки", "appearance": "Внешний вид", "theme": "Тема",
+    "dark": "Тёмная", "light": "Светлая", "language": "Язык",
+    "save": "Сохранить", "saved": "Сохранено"
+  },
+  "profile": {
+    "title": "Профиль", "name": "Имя", "email": "Эл. почта",
+    "changePassword": "Изменить пароль", "current": "Текущий пароль",
+    "new": "Новый пароль", "update": "Обновить"
+  },
+  "common": {
+    "loading": "Загрузка…", "error": "Что-то пошло не так", "save": "Сохранить",
+    "cancel": "Отмена", "delete": "Удалить", "create": "Создать", "edit": "Изменить",
+    "search": "Поиск", "confirm": "Подтвердить", "yes": "Да", "no": "Нет"
+  },
+  "errors": {
+    "generic": "Произошла непредвиденная ошибка",
+    "invalidCredentials": "Неверная почта или пароль",
+    "required": "Это поле обязательно"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "Rakan pintar anda untuk belajar bahasa Arab" },
+  "nav": {
+    "home": "Laman utama", "chat": "Pembantu", "profile": "Profil",
+    "settings": "Tetapan", "logout": "Log keluar",
+    "instructor": "Pensyarah", "admin": "Pentadbir", "contribute": "Sumbang kunci"
+  },
+  "auth": {
+    "login": "Log masuk", "register": "Cipta akaun", "email": "E-mel",
+    "password": "Kata laluan", "name": "Nama penuh", "appLanguage": "Bahasa aplikasi",
+    "forgotPassword": "Lupa kata laluan?", "resetPassword": "Set semula kata laluan",
+    "haveAccount": "Sudah mempunyai akaun?", "noAccount": "Tiada akaun?",
+    "signIn": "Masuk", "signUp": "Daftar",
+    "welcome": "Selamat datang ke Bayan AI",
+    "subtitle": "Belajar bahasa Arab dengan pembantu AI berasaskan buku kursus anda"
+  },
+  "flow": {
+    "chooseTrack": "Pilih bahagian", "chooseMajor": "Pilih pengkhususan",
+    "chooseYear": "Pilih tahun", "chooseSubject": "Pilih subjek",
+    "back": "Kembali", "year": "Tahun"
+  },
+  "chat": {
+    "placeholder": "Tanya tentang subjek ini…", "send": "Hantar", "newChat": "Sembang baharu",
+    "conversations": "Perbualan", "thinking": "Sedang berfikir…",
+    "blocked": "Subjek ini disekat buat masa ini",
+    "fromBook": "Daripada buku", "generalKnowledge": "Pengetahuan umum",
+    "copy": "Salin", "regenerate": "Jana semula", "noConversations": "Belum ada perbualan",
+    "quiz": "Kuiz"
+  },
+  "quiz": {
+    "title": "Jana kuiz", "generate": "Jana", "difficulty": "Kesukaran",
+    "beginner": "Permulaan", "intermediate": "Pertengahan", "advanced": "Lanjutan",
+    "count": "Bilangan soalan", "topic": "Topik (pilihan)", "check": "Semak jawapan",
+    "correct": "Betul", "incorrect": "Salah", "close": "Tutup"
+  },
+  "settings": {
+    "title": "Tetapan", "appearance": "Penampilan", "theme": "Tema",
+    "dark": "Gelap", "light": "Cerah", "language": "Bahasa",
+    "save": "Simpan", "saved": "Disimpan"
+  },
+  "profile": {
+    "title": "Profil", "name": "Nama", "email": "E-mel",
+    "changePassword": "Tukar kata laluan", "current": "Kata laluan semasa",
+    "new": "Kata laluan baharu", "update": "Kemas kini"
+  },
+  "common": {
+    "loading": "Memuatkan…", "error": "Sesuatu tidak kena", "save": "Simpan",
+    "cancel": "Batal", "delete": "Padam", "create": "Cipta", "edit": "Sunting",
+    "search": "Cari", "confirm": "Sahkan", "yes": "Ya", "no": "Tidak"
+  },
+  "errors": {
+    "generic": "Ralat tidak dijangka berlaku",
+    "invalidCredentials": "E-mel atau kata laluan tidak sah",
+    "required": "Medan ini diperlukan"
+  }
+}

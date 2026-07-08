@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "Your smart companion for learning Arabic" },
+  "nav": {
+    "home": "Home", "chat": "Assistant", "profile": "Profile",
+    "settings": "Settings", "logout": "Log out",
+    "instructor": "Instructor", "admin": "Admin", "contribute": "Contribute a key"
+  },
+  "auth": {
+    "login": "Log in", "register": "Create account", "email": "Email",
+    "password": "Password", "name": "Full name", "appLanguage": "Application language",
+    "forgotPassword": "Forgot password?", "resetPassword": "Reset password",
+    "haveAccount": "Already have an account?", "noAccount": "Don't have an account?",
+    "signIn": "Sign in", "signUp": "Sign up",
+    "welcome": "Welcome to Bayan AI",
+    "subtitle": "Learn Arabic with an AI assistant grounded in your course books"
+  },
+  "flow": {
+    "chooseTrack": "Choose a section", "chooseMajor": "Choose a major",
+    "chooseYear": "Choose a year", "chooseSubject": "Choose a subject",
+    "back": "Back", "year": "Year"
+  },
+  "chat": {
+    "placeholder": "Ask about this subject…", "send": "Send", "newChat": "New chat",
+    "conversations": "Conversations", "thinking": "Thinking…",
+    "blocked": "This subject is currently blocked",
+    "fromBook": "From the book", "generalKnowledge": "General knowledge",
+    "copy": "Copy", "regenerate": "Regenerate", "noConversations": "No conversations yet",
+    "quiz": "Quiz"
+  },
+  "quiz": {
+    "title": "Generate a quiz", "generate": "Generate", "difficulty": "Difficulty",
+    "beginner": "Beginner", "intermediate": "Intermediate", "advanced": "Advanced",
+    "count": "Number of questions", "topic": "Topic (optional)", "check": "Check answer",
+    "correct": "Correct", "incorrect": "Incorrect", "close": "Close"
+  },
+  "settings": {
+    "title": "Settings", "appearance": "Appearance", "theme": "Theme",
+    "dark": "Dark", "light": "Light", "language": "Language",
+    "save": "Save", "saved": "Saved"
+  },
+  "profile": {
+    "title": "Profile", "name": "Name", "email": "Email",
+    "changePassword": "Change password", "current": "Current password",
+    "new": "New password", "update": "Update"
+  },
+  "common": {
+    "loading": "Loading…", "error": "Something went wrong", "save": "Save",
+    "cancel": "Cancel", "delete": "Delete", "create": "Create", "edit": "Edit",
+    "search": "Search", "confirm": "Confirm", "yes": "Yes", "no": "No"
+  },
+  "errors": {
+    "generic": "An unexpected error occurred",
+    "invalidCredentials": "Invalid email or password",
+    "required": "This field is required"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "아랍어 학습을 위한 스마트 동반자" },
+  "nav": {
+    "home": "홈", "chat": "어시스턴트", "profile": "프로필",
+    "settings": "설정", "logout": "로그아웃",
+    "instructor": "강사", "admin": "관리자", "contribute": "키 기여"
+  },
+  "auth": {
+    "login": "로그인", "register": "계정 만들기", "email": "이메일",
+    "password": "비밀번호", "name": "이름", "appLanguage": "앱 언어",
+    "forgotPassword": "비밀번호를 잊으셨나요?", "resetPassword": "비밀번호 재설정",
+    "haveAccount": "이미 계정이 있으신가요?", "noAccount": "계정이 없으신가요?",
+    "signIn": "로그인", "signUp": "가입",
+    "welcome": "Bayan AI에 오신 것을 환영합니다",
+    "subtitle": "교재를 기반으로 한 AI 어시스턴트와 함께 아랍어를 배우세요"
+  },
+  "flow": {
+    "chooseTrack": "섹션 선택", "chooseMajor": "전공 선택",
+    "chooseYear": "학년 선택", "chooseSubject": "과목 선택",
+    "back": "뒤로", "year": "학년"
+  },
+  "chat": {
+    "placeholder": "이 과목에 대해 질문하세요…", "send": "전송", "newChat": "새 대화",
+    "conversations": "대화 목록", "thinking": "생각 중…",
+    "blocked": "이 과목은 현재 차단되어 있습니다",
+    "fromBook": "교재에서", "generalKnowledge": "일반 지식",
+    "copy": "복사", "regenerate": "다시 생성", "noConversations": "아직 대화가 없습니다",
+    "quiz": "퀴즈"
+  },
+  "quiz": {
+    "title": "퀴즈 생성", "generate": "생성", "difficulty": "난이도",
+    "beginner": "초급", "intermediate": "중급", "advanced": "고급",
+    "count": "문항 수", "topic": "주제 (선택 사항)", "check": "정답 확인",
+    "correct": "정답", "incorrect": "오답", "close": "닫기"
+  },
+  "settings": {
+    "title": "설정", "appearance": "화면", "theme": "테마",
+    "dark": "다크", "light": "라이트", "language": "언어",
+    "save": "저장", "saved": "저장됨"
+  },
+  "profile": {
+    "title": "프로필", "name": "이름", "email": "이메일",
+    "changePassword": "비밀번호 변경", "current": "현재 비밀번호",
+    "new": "새 비밀번호", "update": "업데이트"
+  },
+  "common": {
+    "loading": "로딩 중…", "error": "문제가 발생했습니다", "save": "저장",
+    "cancel": "취소", "delete": "삭제", "create": "만들기", "edit": "편집",
+    "search": "검색", "confirm": "확인", "yes": "예", "no": "아니오"
+  },
+  "errors": {
+    "generic": "예기치 않은 오류가 발생했습니다",
+    "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다",
+    "required": "필수 입력 항목입니다"
+  }
+}

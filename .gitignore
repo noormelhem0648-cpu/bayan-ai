@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+backend/data/
+*.faiss
+*.pkl
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env
+.env
+*.local
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

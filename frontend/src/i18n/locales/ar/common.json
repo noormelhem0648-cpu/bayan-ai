@@ -1,0 +1,56 @@
+{
+  "app": { "name": "بيان AI", "tagline": "رفيقك الذكي لتعلّم اللغة العربية" },
+  "nav": {
+    "home": "الرئيسية", "chat": "المساعد", "profile": "الملف الشخصي",
+    "settings": "الإعدادات", "logout": "تسجيل الخروج",
+    "instructor": "المدرّس", "admin": "المدير", "contribute": "التبرّع بمفتاح"
+  },
+  "auth": {
+    "login": "تسجيل الدخول", "register": "إنشاء حساب", "email": "البريد الإلكتروني",
+    "password": "كلمة المرور", "name": "الاسم الكامل", "appLanguage": "لغة التطبيق",
+    "forgotPassword": "نسيت كلمة المرور؟", "resetPassword": "إعادة تعيين كلمة المرور",
+    "haveAccount": "لديك حساب بالفعل؟", "noAccount": "ليس لديك حساب؟",
+    "signIn": "دخول", "signUp": "تسجيل",
+    "welcome": "مرحباً بك في بيان AI",
+    "subtitle": "تعلّم العربية مع مساعد ذكي يعتمد على كتب موادك"
+  },
+  "flow": {
+    "chooseTrack": "اختر القسم", "chooseMajor": "اختر التخصص",
+    "chooseYear": "اختر السنة الدراسية", "chooseSubject": "اختر المادة",
+    "back": "رجوع", "year": "السنة"
+  },
+  "chat": {
+    "placeholder": "اسأل عن هذه المادة…", "send": "إرسال", "newChat": "محادثة جديدة",
+    "conversations": "المحادثات", "thinking": "يفكّر…",
+    "blocked": "هذه المادة محجوبة حالياً",
+    "fromBook": "من الكتاب", "generalKnowledge": "معرفة عامة",
+    "copy": "نسخ", "regenerate": "إعادة توليد", "noConversations": "لا توجد محادثات بعد",
+    "quiz": "اختبار"
+  },
+  "quiz": {
+    "title": "إنشاء اختبار", "generate": "توليد", "difficulty": "الصعوبة",
+    "beginner": "مبتدئ", "intermediate": "متوسط", "advanced": "متقدم",
+    "count": "عدد الأسئلة", "topic": "الموضوع (اختياري)", "check": "تحقّق من الإجابة",
+    "correct": "صحيح", "incorrect": "غير صحيح", "close": "إغلاق"
+  },
+  "settings": {
+    "title": "الإعدادات", "appearance": "المظهر", "theme": "السمة",
+    "dark": "داكن", "light": "فاتح", "language": "اللغة",
+    "save": "حفظ", "saved": "تم الحفظ"
+  },
+  "profile": {
+    "title": "الملف الشخصي", "name": "الاسم", "email": "البريد الإلكتروني",
+    "changePassword": "تغيير كلمة المرور", "current": "كلمة المرور الحالية",
+    "new": "كلمة المرور الجديدة", "update": "تحديث"
+  },
+  "common": {
+    "loading": "جارٍ التحميل…", "error": "حدث خطأ ما", "save": "حفظ",
+    "cancel": "إلغاء", "delete": "حذف", "create": "إنشاء", "edit": "تعديل",
+    "search": "بحث", "confirm": "تأكيد", "yes": "نعم", "no": "لا"
+  },
+  "errors": {
+    "generic": "حدث خطأ غير متوقع",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+    "required": "هذا الحقل مطلوب"
+  }
+}

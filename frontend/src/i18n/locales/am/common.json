@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "ዐረብኛን ለመማር ብልህ አጋርዎ" },
+  "nav": {
+    "home": "መነሻ", "chat": "ረዳት", "profile": "መገለጫ",
+    "settings": "ቅንብሮች", "logout": "ውጣ",
+    "instructor": "አስተማሪ", "admin": "አስተዳዳሪ", "contribute": "ቁልፍ ያበርክቱ"
+  },
+  "auth": {
+    "login": "ግባ", "register": "መለያ ፍጠር", "email": "ኢሜይል",
+    "password": "የይለፍ ቃል", "name": "ሙሉ ስም", "appLanguage": "የመተግበሪያ ቋንቋ",
+    "forgotPassword": "የይለፍ ቃል ረሱ?", "resetPassword": "የይለፍ ቃል ዳግም አስጀምር",
+    "haveAccount": "መለያ አለዎት?", "noAccount": "መለያ የለዎትም?",
+    "signIn": "ግባ", "signUp": "ተመዝገብ",
+    "welcome": "ወደ Bayan AI እንኳን በደህና መጡ",
+    "subtitle": "በኮርስ መጻሕፍትዎ ላይ በተመሠረተ የ AI ረዳት ዐረብኛ ይማሩ"
+  },
+  "flow": {
+    "chooseTrack": "ክፍል ይምረጡ", "chooseMajor": "ስፔሻላይዜሽን ይምረጡ",
+    "chooseYear": "ዓመት ይምረጡ", "chooseSubject": "ትምህርት ይምረጡ",
+    "back": "ተመለስ", "year": "ዓመት"
+  },
+  "chat": {
+    "placeholder": "ስለዚህ ትምህርት ይጠይቁ…", "send": "ላክ", "newChat": "አዲስ ውይይት",
+    "conversations": "ውይይቶች", "thinking": "እያሰበ ነው…",
+    "blocked": "ይህ ትምህርት አሁን ተዘግቷል",
+    "fromBook": "ከመጽሐፉ", "generalKnowledge": "አጠቃላይ እውቀት",
+    "copy": "ቅዳ", "regenerate": "እንደገና አመንጭ", "noConversations": "ገና ውይይት የለም",
+    "quiz": "ፈተና"
+  },
+  "quiz": {
+    "title": "ፈተና ፍጠር", "generate": "አመንጭ", "difficulty": "ደረጃ",
+    "beginner": "ጀማሪ", "intermediate": "መካከለኛ", "advanced": "የላቀ",
+    "count": "የጥያቄ ብዛት", "topic": "ርዕስ (አማራጭ)", "check": "መልስ አረጋግጥ",
+    "correct": "ትክክል", "incorrect": "ስህተት", "close": "ዝጋ"
+  },
+  "settings": {
+    "title": "ቅንብሮች", "appearance": "መልክ", "theme": "ገጽታ",
+    "dark": "ጨለማ", "light": "ብሩህ", "language": "ቋንቋ",
+    "save": "አስቀምጥ", "saved": "ተቀምጧል"
+  },
+  "profile": {
+    "title": "መገለጫ", "name": "ስም", "email": "ኢሜይል",
+    "changePassword": "የይለፍ ቃል ቀይር", "current": "የአሁኑ የይለፍ ቃል",
+    "new": "አዲስ የይለፍ ቃል", "update": "አዘምን"
+  },
+  "common": {
+    "loading": "በመጫን ላይ…", "error": "የሆነ ስህተት ተከስቷል", "save": "አስቀምጥ",
+    "cancel": "ተወው", "delete": "ሰርዝ", "create": "ፍጠር", "edit": "አርትዕ",
+    "search": "ፈልግ", "confirm": "አረጋግጥ", "yes": "አዎ", "no": "አይ"
+  },
+  "errors": {
+    "generic": "ያልተጠበቀ ስህተት ተከስቷል",
+    "invalidCredentials": "ኢሜይል ወይም የይለፍ ቃል ትክክል አይደለም",
+    "required": "ይህ መስክ ያስፈልጋል"
+  }
+}

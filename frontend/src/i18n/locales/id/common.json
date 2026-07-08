@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "Teman cerdas Anda untuk belajar bahasa Arab" },
+  "nav": {
+    "home": "Beranda", "chat": "Asisten", "profile": "Profil",
+    "settings": "Pengaturan", "logout": "Keluar",
+    "instructor": "Pengajar", "admin": "Admin", "contribute": "Sumbang kunci"
+  },
+  "auth": {
+    "login": "Masuk", "register": "Buat akun", "email": "Email",
+    "password": "Kata sandi", "name": "Nama lengkap", "appLanguage": "Bahasa aplikasi",
+    "forgotPassword": "Lupa kata sandi?", "resetPassword": "Atur ulang kata sandi",
+    "haveAccount": "Sudah punya akun?", "noAccount": "Belum punya akun?",
+    "signIn": "Masuk", "signUp": "Daftar",
+    "welcome": "Selamat datang di Bayan AI",
+    "subtitle": "Belajar bahasa Arab dengan asisten AI berbasis buku kuliah Anda"
+  },
+  "flow": {
+    "chooseTrack": "Pilih bagian", "chooseMajor": "Pilih jurusan",
+    "chooseYear": "Pilih tahun", "chooseSubject": "Pilih mata kuliah",
+    "back": "Kembali", "year": "Tahun"
+  },
+  "chat": {
+    "placeholder": "Tanyakan tentang mata kuliah ini…", "send": "Kirim", "newChat": "Obrolan baru",
+    "conversations": "Percakapan", "thinking": "Sedang berpikir…",
+    "blocked": "Mata kuliah ini sedang diblokir",
+    "fromBook": "Dari buku", "generalKnowledge": "Pengetahuan umum",
+    "copy": "Salin", "regenerate": "Buat ulang", "noConversations": "Belum ada percakapan",
+    "quiz": "Kuis"
+  },
+  "quiz": {
+    "title": "Buat kuis", "generate": "Buat", "difficulty": "Tingkat kesulitan",
+    "beginner": "Pemula", "intermediate": "Menengah", "advanced": "Lanjutan",
+    "count": "Jumlah soal", "topic": "Topik (opsional)", "check": "Periksa jawaban",
+    "correct": "Benar", "incorrect": "Salah", "close": "Tutup"
+  },
+  "settings": {
+    "title": "Pengaturan", "appearance": "Tampilan", "theme": "Tema",
+    "dark": "Gelap", "light": "Terang", "language": "Bahasa",
+    "save": "Simpan", "saved": "Tersimpan"
+  },
+  "profile": {
+    "title": "Profil", "name": "Nama", "email": "Email",
+    "changePassword": "Ubah kata sandi", "current": "Kata sandi saat ini",
+    "new": "Kata sandi baru", "update": "Perbarui"
+  },
+  "common": {
+    "loading": "Memuat…", "error": "Terjadi kesalahan", "save": "Simpan",
+    "cancel": "Batal", "delete": "Hapus", "create": "Buat", "edit": "Sunting",
+    "search": "Cari", "confirm": "Konfirmasi", "yes": "Ya", "no": "Tidak"
+  },
+  "errors": {
+    "generic": "Terjadi kesalahan tak terduga",
+    "invalidCredentials": "Email atau kata sandi tidak valid",
+    "required": "Kolom ini wajib diisi"
+  }
+}

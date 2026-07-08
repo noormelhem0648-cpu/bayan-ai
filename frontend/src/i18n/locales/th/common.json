@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "เพื่อนอัจฉริยะสำหรับการเรียนภาษาอาหรับ" },
+  "nav": {
+    "home": "หน้าแรก", "chat": "ผู้ช่วย", "profile": "โปรไฟล์",
+    "settings": "การตั้งค่า", "logout": "ออกจากระบบ",
+    "instructor": "อาจารย์", "admin": "ผู้ดูแลระบบ", "contribute": "บริจาคคีย์"
+  },
+  "auth": {
+    "login": "เข้าสู่ระบบ", "register": "สร้างบัญชี", "email": "อีเมล",
+    "password": "รหัสผ่าน", "name": "ชื่อ-นามสกุล", "appLanguage": "ภาษาของแอป",
+    "forgotPassword": "ลืมรหัสผ่าน?", "resetPassword": "ตั้งรหัสผ่านใหม่",
+    "haveAccount": "มีบัญชีอยู่แล้ว?", "noAccount": "ยังไม่มีบัญชี?",
+    "signIn": "เข้าสู่ระบบ", "signUp": "สมัคร",
+    "welcome": "ยินดีต้อนรับสู่ Bayan AI",
+    "subtitle": "เรียนภาษาอาหรับกับผู้ช่วย AI ที่อ้างอิงจากตำราเรียนของคุณ"
+  },
+  "flow": {
+    "chooseTrack": "เลือกหมวด", "chooseMajor": "เลือกสาขา",
+    "chooseYear": "เลือกชั้นปี", "chooseSubject": "เลือกวิชา",
+    "back": "ย้อนกลับ", "year": "ปี"
+  },
+  "chat": {
+    "placeholder": "ถามเกี่ยวกับวิชานี้…", "send": "ส่ง", "newChat": "แชทใหม่",
+    "conversations": "บทสนทนา", "thinking": "กำลังคิด…",
+    "blocked": "ขณะนี้วิชานี้ถูกบล็อก",
+    "fromBook": "จากหนังสือ", "generalKnowledge": "ความรู้ทั่วไป",
+    "copy": "คัดลอก", "regenerate": "สร้างใหม่", "noConversations": "ยังไม่มีบทสนทนา",
+    "quiz": "แบบทดสอบ"
+  },
+  "quiz": {
+    "title": "สร้างแบบทดสอบ", "generate": "สร้าง", "difficulty": "ระดับความยาก",
+    "beginner": "เริ่มต้น", "intermediate": "ปานกลาง", "advanced": "ขั้นสูง",
+    "count": "จำนวนคำถาม", "topic": "หัวข้อ (ไม่บังคับ)", "check": "ตรวจคำตอบ",
+    "correct": "ถูกต้อง", "incorrect": "ไม่ถูกต้อง", "close": "ปิด"
+  },
+  "settings": {
+    "title": "การตั้งค่า", "appearance": "รูปลักษณ์", "theme": "ธีม",
+    "dark": "มืด", "light": "สว่าง", "language": "ภาษา",
+    "save": "บันทึก", "saved": "บันทึกแล้ว"
+  },
+  "profile": {
+    "title": "โปรไฟล์", "name": "ชื่อ", "email": "อีเมล",
+    "changePassword": "เปลี่ยนรหัสผ่าน", "current": "รหัสผ่านปัจจุบัน",
+    "new": "รหัสผ่านใหม่", "update": "อัปเดต"
+  },
+  "common": {
+    "loading": "กำลังโหลด…", "error": "เกิดข้อผิดพลาด", "save": "บันทึก",
+    "cancel": "ยกเลิก", "delete": "ลบ", "create": "สร้าง", "edit": "แก้ไข",
+    "search": "ค้นหา", "confirm": "ยืนยัน", "yes": "ใช่", "no": "ไม่"
+  },
+  "errors": {
+    "generic": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
+    "invalidCredentials": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+    "required": "จำเป็นต้องกรอกช่องนี้"
+  }
+}

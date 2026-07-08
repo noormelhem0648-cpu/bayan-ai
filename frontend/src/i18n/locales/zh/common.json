@@ -1,0 +1,56 @@
+{
+  "app": { "name": "Bayan AI", "tagline": "您学习阿拉伯语的智能伙伴" },
+  "nav": {
+    "home": "首页", "chat": "助手", "profile": "个人资料",
+    "settings": "设置", "logout": "退出登录",
+    "instructor": "教师", "admin": "管理员", "contribute": "贡献密钥"
+  },
+  "auth": {
+    "login": "登录", "register": "创建账户", "email": "电子邮箱",
+    "password": "密码", "name": "全名", "appLanguage": "应用语言",
+    "forgotPassword": "忘记密码？", "resetPassword": "重置密码",
+    "haveAccount": "已有账户？", "noAccount": "还没有账户？",
+    "signIn": "登录", "signUp": "注册",
+    "welcome": "欢迎使用 Bayan AI",
+    "subtitle": "使用基于课本的 AI 助手学习阿拉伯语"
+  },
+  "flow": {
+    "chooseTrack": "选择板块", "chooseMajor": "选择专业",
+    "chooseYear": "选择年级", "chooseSubject": "选择科目",
+    "back": "返回", "year": "学年"
+  },
+  "chat": {
+    "placeholder": "就本科目提问…", "send": "发送", "newChat": "新对话",
+    "conversations": "对话记录", "thinking": "思考中…",
+    "blocked": "该科目当前已被封锁",
+    "fromBook": "来自课本", "generalKnowledge": "常识",
+    "copy": "复制", "regenerate": "重新生成", "noConversations": "暂无对话",
+    "quiz": "测验"
+  },
+  "quiz": {
+    "title": "生成测验", "generate": "生成", "difficulty": "难度",
+    "beginner": "初级", "intermediate": "中级", "advanced": "高级",
+    "count": "题目数量", "topic": "主题（可选）", "check": "检查答案",
+    "correct": "正确", "incorrect": "错误", "close": "关闭"
+  },
+  "settings": {
+    "title": "设置", "appearance": "外观", "theme": "主题",
+    "dark": "深色", "light": "浅色", "language": "语言",
+    "save": "保存", "saved": "已保存"
+  },
+  "profile": {
+    "title": "个人资料", "name": "姓名", "email": "电子邮箱",
+    "changePassword": "修改密码", "current": "当前密码",
+    "new": "新密码", "update": "更新"
+  },
+  "common": {
+    "loading": "加载中…", "error": "出错了", "save": "保存",
+    "cancel": "取消", "delete": "删除", "create": "创建", "edit": "编辑",
+    "search": "搜索", "confirm": "确认", "yes": "是", "no": "否"
+  },
+  "errors": {
+    "generic": "发生意外错误",
+    "invalidCredentials": "邮箱或密码无效",
+    "required": "此字段为必填项"
+  }
+}
